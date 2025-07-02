@@ -3218,19 +3218,6 @@ input, select, textarea {
     line-height: 1.9;
   }
 
-    #contact h2 {
-    font-size: 2.2em;
-    letter-spacing: 0.1em;
-	color: #859de9;
-    text-transform: none;
-  }
-
-	#contact p {
-    font-size: 1.1em;
-    line-height: 1.9;
-  }
-
-
 #skills h3 {
   margin-top: 2em;
   font-size: 1.1em;
@@ -3275,4 +3262,179 @@ input, select, textarea {
   font-weight: 600;
   font-size: 1em;
   display: block;
+}
+
+.project-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-bottom: 3em;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 2.5em 2em;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.project-text {
+  flex: 1 1 60%;
+}
+
+.project-text h3 {
+  font-size: 1.3em;
+  border-left: 5px solid #2ebaae;
+  padding-left: 0.5em;
+  margin-bottom: 0.8em;
+  font-weight: 700;
+  color: #222;
+}
+
+.project-text p {
+  margin: 0.3em 0;
+  color: #444;
+  font-size: 0.95em;
+}
+
+.project-text ul {
+  margin: 1em 0;
+  padding-left: 1.4em;
+}
+
+.project-text ul li {
+  list-style: none;
+  position: relative;
+  margin-bottom: 0.4em;
+  padding-left: 1.2em;
+  font-size: 0.93em;
+  color: #333;
+}
+
+.project-text ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2ebaae;
+  font-size: 0.85em;
+}
+
+.project-text a {
+  display: inline-block;
+  margin-top: 1em;
+  margin-left: 3em;
+  padding: 0.5em 1em;
+  background-color: #2ebaae;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.project-text a:hover {
+  background-color: #239a94;
+}
+
+.project-image {
+  flex: 1 1 320px; /* 최소 320px 확보 */
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #f0f0f0;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), inset 0 0 5px rgba(255, 255, 255, 0.2);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2), inset 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.contact-section {
+  background-color: #7474c2;
+  color: white;
+  padding: 7em 10em; 
+  border-radius: 16px;
+  margin-top: 3em;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2em;
+  max-width: 1200px;  
+  margin: 0 auto;
+  padding-left: 2em;   
+  padding-right: 2em;
+}
+
+.contact-left {
+    flex: 1 1 48%;       /* ✅ 비율 유지하되 균형 맞춤 */
+  min-width: 300px;
+}
+
+.contact-left h2 {
+  font-size: 2.2em;
+  margin-bottom: 0.6em;
+  color: #2ebaae;
+}
+
+.contact-left p {
+  font-size: 1.3em;
+  line-height: 1.6;
+  color: #eee;
+}
+
+.contact-right {
+    flex: 1 1 48%;       /* ✅ 비율 유지하되 균형 맞춤 */
+  min-width: 300px;
+    font-size: 1.2em;           /* ✅ 전체 글자 크기 증가 */
+  text-align: right;          /* ✅ 오른쪽 정렬 */
+  padding-right: 0.5em;       /* ✅ 살짝 여유 */
+}
+
+.contact-right ul {
+  list-style: none;
+  padding: 0;
+    margin: 0;
+}
+
+.contact-right li {
+  display: flex;
+  justify-content: flex-end;  /* ✅ 아이템 오른쪽으로 정렬 */
+  align-items: baseline;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.contact-right .label {
+  min-width: 80px;            /* ✅ 라벨 너비 살짝 확장 */
+  font-weight: 600;
+  color: #2ebaae;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.contact-right a {
+  color: #f1f7f6;
+  text-decoration: none;
+}
+
+.contact-right a:hover {
+  text-decoration: underline;
 }
