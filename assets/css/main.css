@@ -3438,3 +3438,111 @@ input, select, textarea {
 .contact-right a:hover {
   text-decoration: underline;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+/* === Intro Section (Full Page) === */
+.intro-section {
+  width: 100%;               /* ✅ 화면 가로 전체 꽉 채우기 */
+  height: 100vh;
+  background-color: #f5f7fa;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;     /* ✅ 패딩 포함해서 정렬 */
+  overflow: hidden;
+}
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ✅ 수평 중앙 정렬 */
+  gap: 5em;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.intro-image img {
+  width: 340px;              /* ✅ 이미지 더 큼 */
+  height: 340px;
+  object-fit: contain;       /* ✅ 머리 잘리지 않게 */
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  border: 6px solid #fff;
+  background-color: #fff;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.intro-text h1 {
+  font-size: 3.5em;
+  color: #2ebaae;
+  font-weight: 900;
+  margin-bottom: 0.8em;
+  letter-spacing: 0.1em;
+}
+
+.intro-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+  color: #555;
+  line-height: 2;
+}
+
+.intro-info li strong {
+  display: inline-block;
+  width: 120px;
+  color: #2ebaae;
+}
+
+/* 아래 스크롤 버튼 */
+.scroll-down {
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  color: #2ebaae;
+  animation: bounce 1.2s infinite;
+  text-decoration: none;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50%      { transform: translateY(10px) translateX(-50%); }
+}
+
+/* 반응형 모바일 대응 */
+@media screen and (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2em;
+  }
+
+  .intro-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .intro-text h1 {
+    font-size: 2.4em;
+  }
+
+  .intro-info li strong {
+    width: 90px;
+  }
+}
